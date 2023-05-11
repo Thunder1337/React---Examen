@@ -46,11 +46,11 @@ function App() {
         <h2 className="center">Calculator Coordnate</h2>
         <form onSubmit={calcDistanta}>
           <div>
-            <label></label>
+            <label>X1</label>
             <input value={x1} onChange={(e) => setX1(e.target.value)} />
           </div>
           <div>
-            <label>x2</label>
+            <label>X2</label>
             <input value={x2} onChange={(e) => setX2(e.target.value)} />
           </div>
           <div>
