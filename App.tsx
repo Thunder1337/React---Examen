@@ -29,10 +29,10 @@ function App() {
   //  logica si afisare imagini
   let imgSrc;
 
-  if (distanta === null) {
+  if (x1 === 0 || x2 === 0 || y1 === 0 || y2 === 0) {
     imgSrc = null;
   } else {
-    //imgSrc = require('/images/underweight.png');
+    imgSrc = "https://www.geogebra.org/resource/nrun7teh/r2rrakmQluvTRyA0/material-nrun7teh.png";
   }
 
   //Reload aplicatie
