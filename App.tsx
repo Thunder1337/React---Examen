@@ -29,10 +29,10 @@ function App() {
   //  logica si afisare imagini
   let imgSrc;
 
-  if (distanta === 0) {
+  if (distanta === null) {
     imgSrc = null;
   } else {
-    // imgSrc = require('../src/assets/underweight.png')
+    //imgSrc = require('/images/underweight.png');
   }
 
   //Reload aplicatie
