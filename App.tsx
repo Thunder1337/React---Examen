@@ -11,7 +11,7 @@ function App() {
   const [distanta, setDistanta] = useState('');
   const [message, setMessage] = useState('');
 
-  let calcDistanta = (event) => {
+  let calcDistanta = (event) => { // variabila de tip let este disponibila doar inauntru blocului de cod unde a fost definita
     //oprim comportamentul implicit al formularului,
     //se folosește event.preventDefault() pentru a asigura că comportamentul
     //personalizat definit în funcția calcBmi este executat în locul comportamentului
@@ -25,7 +25,7 @@ function App() {
       setDistanta(distanta.toFixed(10));
     }
   };
-
+  // variabila de tip var este disponibila pe tot parcursul functiei
   //  logica si afisare imagini
   let imgSrc;
 
