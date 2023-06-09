@@ -12,6 +12,7 @@ function App() {
   const [y2, setY2] = useState(0); // Declara variabila de stare y2 și funcția setY2 pentru a gestiona valoarea și actualizarea sa. Valoarea inițială este 0.
   const [distanta, setDistanta] = useState(''); // Declara variabila de stare distanta și funcția setDistanta pentru a gestiona valoarea și actualizarea sa. Valoarea inițială este un șir vid.
   const [message, setMessage] = useState(''); // Declara variabila de stare message și funcția setMessage pentru a gestiona valoarea și actualizarea sa. Valoarea inițială este un șir vid.
+  const [introducereCount, setIntroducereCount] = useState(0); // Adăugați variabila de stare introducereCount și funcția setIntroducereCount pentru a gestiona numărul de apăsări pe butonul "Introducere".
 
   let calcDistanta = (event) => {
     // Defineste o funcție calcDistanta care este apelată la evenimentul de submit al formularului.
@@ -22,6 +23,8 @@ function App() {
       // Verifică dacă una dintre variabilele de stare are valoarea 0.
       alert('Adauga coordonatele valide.'); // Afisează un mesaj de alertă cu privire la coordonatele invalide.
     } else {
+      setIntroducereCount(introducereCount + 1); // Incrementați valoarea variabilei introducereCount la fiecare apăsare pe butonul "Introducere".
+
       let distanta = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5; // Calculează distanța folosind formula distanței euclidiene între două puncte.
       setDistanta(distanta.toFixed(10)); // Actualizează valoarea variabilei de stare distanta cu distanta calculată și rotunjită la 10 zecimale.
     }
@@ -79,8 +82,8 @@ function App() {
           <div>
             <button className="btn" type="submit">
               {' '}
-              {/* Afisează un buton de tip submit */}
-              Introducere
+              Introducere ({introducereCount})
+              {/* Afisează numărul de apăsări al butonului "Introducere" */}
             </button>
             <button className="btn btn-outline" onClick={reload} type="submit">
               {' '}
